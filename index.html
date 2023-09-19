@@ -1,0 +1,145 @@
+<!-- In dit bestand staat de HTML-code voor je Quiz. Je kunt deze code aanpassen. -->
+
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Quiz Development 1 - Standaardtemplate</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/quiz.css">
+    <!-- FontAweome CDN Link for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+
+<body>
+    <div class="container">
+
+        <main>
+            <div class="page" id="page-landing">
+                <h1 class="text-center">Welkom bij de Algemene kennis quiz!</h1>
+                <div class="text-center">
+                    <p>Speel de quiz en test je algemene kennis!</p>
+                    <p>Hier wordt jij getest over jouw algemene kennis! </p>
+                    <p>Veel succes!!! </p>
+                    <button class="rounded bt3 font-bold" id="button-start">Start</button>
+                    <button class="sb_btn rounded bt3 font-bold" id="button-leaderbord1">leaderbord</button><br><br>
+                    <a class="documentation-link" href="documentation/">
+                        Bekijk hier mijn documentatie
+                        </a>
+                </div>
+            </div>
+
+            <div class="page" id="page-login">
+
+                <div class="login_box text-center">
+                    <div class="login_titel">
+                        <h1>Voer hier jouw Studenten nummer in</h1>
+                    </div>
+                    <div id="gebruiker">
+                        <div class="form-login">
+                            <div class="form-group">
+                                <input type="text" id="studentnummer" class="form-control" name="gebruiker" placeholder="Studentnummer" />
+                            </div>
+
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <p id="error"></p>
+                            <button type="button" id="button-login" class="rounded bt3 font-bold">Login</button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+            <div class="page" id="page-start">
+
+                <div class="info_box text-center">
+                    <div class="info_titel">
+                        <h1>Regels voor de Quiz</h1>
+                    </div>
+                    <div class="info_lijst">
+                        <div class="info">1. Op het moment dat je de quiz start moet je de quiz afmaken je mag de vraag niet verlaten.</div>
+                        <div class="info">2. Na je een vraag hebt beantwoord kan je je antwoord niet veranderen.</div>
+                        <!-- <div class="info">3. </div> -->
+                        <button class="rounded bt3 font-bold" id="button-questions">Vragen</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="page quiz_box" id="page-questions">
+                <header>
+                    <div class="titel">
+                        <h2>Algemene kennis en raadsel vragen</h2>
+                    </div>
+                    <!-- <div class="score">
+                        <p> Huidige Score: </p>
+                    </div> -->
+                </header>
+                <div class="section">
+                    <div class="vragen">
+
+                    </div>
+                    <div class="antwoordenlijst">
+
+                    </div>
+                </div>
+                <!-- footer voor quiz -->
+                <div class="footer_voor_quiz">
+                    <div class="totalen_vragen">
+                        <span>1 / 10 Vragen</span>
+                    </div>
+                    <button class="next_btn">Volgende vraag</button>
+                </div>
+            </div>
+            <!-- Result Box -->
+            <div class="page resultaten_box text-center" id="page-resultaten">
+                <div class="icon">
+                    <i class="fas fa-crown"></i>
+                </div>
+                <div class="complete_text">Je hebt de quiz afgemaakt</div>
+                <div class="score_text">
+
+                </div><br>
+                <div class="score_opgestuurd">
+
+                </div>
+                <div class="finish_button">
+                    <button id="button-leaderbord" class="sb_btn rounded bt3 font-bold">Scorebord</button>
+                    <button id="button-quit" class="quit quit_btn rounded bt3 font-bold">Stop Quiz</button>
+                </div>
+            </div>
+            <!-- Result Box -->
+            <div class="page leaderbord_box" id="page-leaderbord">
+                <div class="finish_button">
+                    <p class="" id="scoreboard"></p>
+                    <button id="button-leaderbordquit" class="quit quit_btn rounded bt3 font-bold">Stop Quiz</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- 
+    <a class="documentation-link" href="documentation/">
+        Bekijk hier mijn documentatie
+        </a> -->
+
+    <div class="footer">
+        <div class="footer_item">Student: <span id="naam">Onbekend</span></div>
+        <div class="footer_item" id="timer">
+            <span id="minuten">00</span>:<span id="seconden">00</span>
+        </div>
+        <div class="footer_item">Huidige score: <span id="score">0</span></div>
+    </div>
+    <script src="js/quiz.js"></script>
+    <script src="js/questions.js"></script>
+
+</body>
+
+</html>
